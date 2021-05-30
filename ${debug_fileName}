@@ -1,0 +1,30 @@
+2021-05-30 13:22:14.753 [DEBUG] org.springframework.boot.StartupInfoLogger.logStarting[56 line] - Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-30 13:22:15.869 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	c.p.h.c.HttpController:
+	{GET [/http/demo/{id}]}: getDemo(String,String)
+2021-05-30 13:22:15.874 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2021-05-30 13:22:15.887 [DEBUG] org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers[86 line] - 'beanNameHandlerMapping' {}
+2021-05-30 13:22:15.898 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.logMappings[177 line] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+2021-05-30 13:22:46.631 [DEBUG] org.springframework.boot.StartupInfoLogger.logStarting[56 line] - Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-30 13:22:46.837 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	c.p.h.c.HttpController:
+	{GET [/http/demo/{id}]}: getDemo(String,String)
+2021-05-30 13:22:46.839 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2021-05-30 13:22:46.844 [DEBUG] org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers[86 line] - 'beanNameHandlerMapping' {}
+2021-05-30 13:22:46.846 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.logMappings[177 line] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+2021-05-30 13:23:06.197 [DEBUG] org.springframework.boot.StartupInfoLogger.logStarting[56 line] - Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-30 13:23:07.013 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	c.p.h.c.HttpController:
+	{GET [/http/demo/{id}]}: getDemo(String,String)
+2021-05-30 13:23:07.016 [DEBUG] org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods[294 line] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2021-05-30 13:23:07.026 [DEBUG] org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers[86 line] - 'beanNameHandlerMapping' {}
+2021-05-30 13:23:07.035 [DEBUG] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.logMappings[177 line] - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
