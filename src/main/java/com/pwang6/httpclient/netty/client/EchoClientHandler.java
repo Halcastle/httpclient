@@ -15,6 +15,7 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 //        super.channelActive(ctx);
+        log.info("客户端连接建立，开始写信息:{}","Netty rocks!");
         ctx.writeAndFlush(Unpooled.copiedBuffer("Netty rocks!", CharsetUtil.UTF_8));
     }
 

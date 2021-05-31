@@ -22,6 +22,12 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        log.info("服务端有连接连入，开始写数据：{}","我是服务端的消息，serverMSG！");
+        ctx.writeAndFlush(Unpooled.copiedBuffer("我是服务端的消息，serverMSG！", CharsetUtil.UTF_8));
+    }
+
+    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 //        super.channelReadComplete(ctx);
         ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
