@@ -11,6 +11,9 @@ import lombok.extern.log4j.Log4j2;
 
 import java.net.InetSocketAddress;
 
+/**
+ * @author Dream
+ */
 @Log4j2
 public class EchoServer {
     private final int port;
@@ -20,11 +23,6 @@ public class EchoServer {
     }
 
     public static void main (String[] args) throws Exception {
-//        if(args.length != 1){
-//            log.error("Usage:{} <port>",EchoServer.class.getSimpleName());
-//            return;
-//        }
-//        int port = Integer.parseInt(args[0]);
         int port = 9001;
         new EchoServer(port).start();
     }

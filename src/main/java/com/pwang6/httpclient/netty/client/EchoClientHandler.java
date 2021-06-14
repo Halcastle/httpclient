@@ -8,13 +8,16 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
 import lombok.extern.log4j.Log4j2;
 
+
+/**
+ * @author Dream
+ */
 @Log4j2
 @ChannelHandler.Sharable
 public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-//        super.channelActive(ctx);
         log.info("客户端连接建立，开始写信息:{}","Netty rocks!");
         ctx.writeAndFlush(Unpooled.copiedBuffer("Netty rocks!", CharsetUtil.UTF_8));
     }
@@ -26,7 +29,6 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-//        super.exceptionCaught(ctx, cause);
         cause.printStackTrace();
         ctx.close();
     }

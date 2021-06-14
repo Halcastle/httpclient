@@ -10,6 +10,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+/**
+ * @author Dream
+ */
 @RestController
 @RequestMapping(value = "/http")
 public class HttpController {

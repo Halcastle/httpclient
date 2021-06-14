@@ -11,6 +11,13 @@ import lombok.extern.log4j.Log4j2;
 
 import java.net.InetSocketAddress;
 
+/**
+  *@ClassName EchoClient
+  *@Description TODO
+  *@author Dream
+  *@Date 2021-06-13 17:07
+  *@Version 1.0
+  **/
 @Log4j2
 public class EchoClient {
     private final String host;
@@ -42,12 +49,6 @@ public class EchoClient {
     }
 
     public static void main(String[] args) throws InterruptedException {
-//        if(args.length != 2){
-//            log.error("Usage:{} <host> <port>",EchoClient.class.getSimpleName());
-//            return;
-//        }
-//        String host = args[0];
-//        int port = Integer.parseInt(args[1]);
         String host = "127.0.0.1";
         int port = 9001;
         new EchoClient(host,port).start();
