@@ -1,5 +1,6 @@
 package com.pwang6.httpclient.netty.init;
 
+import com.pwang6.httpclient.netty.filter.HeaderHttpRequestFilter;
 import com.pwang6.httpclient.netty.inbound.HttpServerHandler;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
@@ -37,6 +38,7 @@ public class ServerHandleInit extends ChannelInitializer<SocketChannel> {
         channelPipeline.addLast("contentCompressor",new HttpContentCompressor());
 
         channelPipeline.addLast("httpServerHandler", new HttpServerHandler(proxyServer));
+        channelPipeline.addLast("headerHttpRequestFilter",new HeaderHttpRequestFilter());
 
     }
 

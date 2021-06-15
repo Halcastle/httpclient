@@ -37,6 +37,11 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
         String data = httpRequest.content().toString(CharsetUtil.UTF_8);
         HttpMethod method = httpRequest.method();
 
+        String wpadd1 = httpRequest.headers().get("wpadd1");
+        String wpadd2 = httpRequest.headers().get("wpadd2");
+        log.info("HttpServerHandler.wpadd1的值为：{}",wpadd1);
+        log.info("HttpServerHandler.wpadd2的值为：{}",wpadd2);
+
         //判断请求链接是否合法
         if(!getString.equals(uri)){
             rtnMsg = "请求路径：【"+uri+"】不合法！receve";
@@ -73,6 +78,8 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
 //        FullHttpResponse httpResponse = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,httpResponseStatus, Unpooled.copiedBuffer(rtnMsg,CharsetUtil.UTF_8));
         FullHttpResponse httpResponse = new DefaultFullHttpResponse(HttpVersion.valueOf(response.protocol().toString()),HttpResponseStatus.valueOf(response.code()), Unpooled.copiedBuffer(response.body().string(),CharsetUtil.UTF_8));
         httpResponse.headers().set(HttpHeaderNames.CONTENT_TYPE,"text/plain;chartset=UTF-8");
+        httpResponse.headers().set("testRes1","test1");
+        httpResponse.headers().add("testRes2","test2");
         cx.writeAndFlush(httpResponse).addListener(ChannelFutureListener.CLOSE);
     }
 }
